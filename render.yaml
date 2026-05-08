@@ -1,0 +1,12 @@
+services:
+    - type: web
+    name: heroes-of-dls-bot
+    env: node
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+            - key: PHONE_NUMBER
+        sync: false
+            - key: SESSION_SECRET
+        generateValue: true
+    autoDeploy: true
